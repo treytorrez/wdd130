@@ -30,7 +30,7 @@
 /* setting "defaults" for the page */
 body, body div, a{ /* Will seperate later when needed*/
 
-    /* TODO:Set background color*/
+    background-color: var(--accent1-color);
     text-align: center;
     margin: 0 auto;
 
@@ -101,7 +101,7 @@ span{
 }
 
 #hero-img{
-    width: 60%;
+    width: 100%;
 }
 
 #hero-msg{
