@@ -1,19 +1,26 @@
-*{
+:root{
     font-family: 'Courier New', Courier, monospace;
+    max-width: 1300px;
+}
+*{
+    margin: 0 auto;
 }
 nav{
+    margin: 0 auto;
     text-align: center;
-    padding:.5% 0%
+    padding:.5% 0%;
+    box-sizing: border-box;
+    margin-bottom: 5%;
+}
+li{
 }
 img{
-    display: block;
     margin: 0 auto;
     border-radius: 1em;
     float: right;
-    margin: 0% 5% 0% 0%;
+    margin: 0% 1%;
     object-fit: auto;
-    width: 20%;
-    height: 6em;
+    max-width: 10%;
 }
 nav a{
     padding: 1em;
