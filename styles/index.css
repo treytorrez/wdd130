@@ -3,7 +3,9 @@
     max-width: 1300px;
 }
 *{
-    margin: 0 auto;
+    /* margin: 0 auto 0 auto; */
+    /* margin: 0; */
+    padding: 0;
 }
 nav{
     margin: 0 auto;
@@ -23,6 +25,7 @@ img{
     max-width: 10%;
 }
 nav a{
+    text-align: center;
     padding: 1em;
     background-color: black;
     color: white;
