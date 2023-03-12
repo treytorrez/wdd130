@@ -1,29 +1,29 @@
 /* if you are using any Google fonts change the font names below to your fonts. 
 Any spaces in your font name should be replaced with a +. 
 Fonts are separated by a | */
-@import url('https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Lato');
+
 
 :root {
   /* change the values below to your colors from your palette */
-  --primary-color: #396E94   ;
-  --secondary-color: #E7C24F ;
-  --accent1-color: #A42212;
-  --accent2-color: white;
+  --primary-color: #252525;
+  --secondary-color: #a2a2a2;
+  --accent1-color: #A43312;
+  --accent2-color: #8f0e00;
 
   /* change the values below to your chosen font(s) */
-  --heading-font: "IM Fell French Canon SC";
-  --paragraph-font: Lato, Helvetica, sans-serif;
+  --heading-font: Courier , sans-serif;
+  --paragraph-font: Tahoma, sans-serif;
 
   /* these colors below should be chosen from among your palette colors above */
-  --headline-color-on-white: #396E94;  /* headlines on a white background */ 
-  --headline-color-on-color: white; /* headlines on a colored background */ 
-  --paragraph-color-on-white: #396E94; /* paragraph text on a white background */ 
-  --paragraph-color-on-color: white; /* paragraph text on a colored background */ 
-  --paragraph-background-color: #396E94  ;
-  --nav-link-color: #396E94;
-  --nav-background-color: #D4AC0D;
-  --nav-hover-link-color: white;
-  --nav-hover-background-color: #396E94;
+  --headline-color-on-white: #8f0e00;  /* headlines on a white background */ 
+  --headline-color-on-color: #a3a3a3; /* headlines on a colored background */ 
+  --paragraph-color-on-white: #252525; /* paragraph text on a white background */ 
+  --paragraph-color-on-color: #a3a3a3; /* paragraph text on a colored background */ 
+  --paragraph-background-color: #252525  ;
+  --nav-link-color: #A43312 ;
+  --nav-background-color: #252525;
+  --nav-hover-link-color: #8F0E00;
+  --nav-hover-background-color: #a3a3a3;
 }
 
 
@@ -115,6 +115,8 @@ nav a {
   min-width: 120px;
   text-decoration: none;
   padding: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
 
 }
 nav a:link, nav a:visited {
@@ -139,7 +141,7 @@ nav a:hover {
 .sitemap > div {
 
   text-align: center;
-
+  font-family: var(--paragraph-font);
 }
 .sm-home {
   grid-area: home;
@@ -155,6 +157,7 @@ nav a:hover {
   grid-area: page3;
   background-color: #ccc;
   line-height: 3em;
+  /* font-family: var(--paragraph-font); */
 }
 
 .top {
