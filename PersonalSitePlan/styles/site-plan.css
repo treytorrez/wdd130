@@ -28,10 +28,6 @@ Fonts are separated by a | */
 
 
 /*  Look around below...but DON'T CHANGE ANYTHING! */
-*{
-  max-width: 1200px;
-  margin: 0 auto
-}
 body {
   max-width: 1200px;
   margin: 0 auto;
@@ -111,7 +107,7 @@ nav {
 nav  {
   list-style-type: none;
   display: flex;
-
+  
 }
 nav a {
   padding:1em;
@@ -120,7 +116,7 @@ nav a {
   padding: 10px;
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
-
+  
 }
 nav a:link, nav a:visited {
   color: var(--nav-link-color);
@@ -133,16 +129,16 @@ nav a:hover {
 .sitemap {
   display: grid;
   justify-content: center;
-
+  
   grid-template-columns: repeat(6, 15%);
   grid-template-rows: 3em 1.5em 1.5em 3em;
   grid-template-areas: ". . home home . ."
-    ". . . top . ."
-    ". left left right right ."
-    "page2 page2 . . page3 page3";
+  ". . . top . ."
+  ". left left right right ."
+  "page2 page2 . . page3 page3";
 }
 .sitemap > div {
-
+  
   text-align: center;
   font-family: var(--paragraph-font);
 }
@@ -180,16 +176,13 @@ nav a:hover {
   border-right: 1px solid;
 }
 
-.wireframe-img {
-  max-width: 1200px;
-  /* text-align: center; */
-  /* margin: 0 auto; */
+img:nth-of-type(4), .logo_img{
+  max-width: 360px;
+  background-color: #252525;
+  box-sizing: border-box;
 }
 
-.logo_img{
-  background-color: #252525;
-}
-#wwr_img{
-  margin:0px 100px 0px 100px;
-  /* max-width: 100px */
+
+img:nth-of-type(5), img:nth-of-type(4), .wireframe_img{
+width: 100%;
 }
