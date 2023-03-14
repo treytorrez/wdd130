@@ -28,7 +28,10 @@ Fonts are separated by a | */
 
 
 /*  Look around below...but DON'T CHANGE ANYTHING! */
-
+*{
+  max-width: 1200px;
+  margin: 0 auto
+}
 body {
   max-width: 1200px;
   margin: 0 auto;
@@ -175,4 +178,18 @@ nav a:hover {
   grid-area: right;
   border-top: 1px solid;
   border-right: 1px solid;
+}
+
+.wireframe-img {
+  max-width: 1200px;
+  /* text-align: center; */
+  /* margin: 0 auto; */
+}
+
+.logo_img{
+  background-color: #252525;
+}
+#wwr_img{
+  margin:0px 100px 0px 100px;
+  /* max-width: 100px */
 }
