@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Patua+One&family=Sofia+Sans+Condensed&display=swap');
 
 :root {
-    /* change the values below to your colors from your palette; TODO:GET RID OF UNECESSARY VARIABLES*/
+    /* change the values below to your colors from your palette*/
     --primary-color: #6b4b3e   ;
     --secondary-color: #2d4739 ;
     --accent1-color: #ECDCC1;
@@ -329,6 +329,60 @@ form {
 li{
     list-style: none;
 }
+/*-------------------- BLOG --------------------*/
+.blog-content{
+    text-align: left;
+}
+.blog-title{
+    font-size: 3rem;
+    padding: 2% 5% 0 2%;
+    background-color: var(--accent2-color);
+}
+h2{
+    padding: 0 2% ;
+    margin: 0;  
+}
+.post-title{
+    font-size: 2em;
+    padding: 2% 2% 0 2%;
+    margin: 0;
+    margin: 0;
+}
+.blog-content p, .blog-content ul{
+    padding: 0 5% 0;
+}
+button{
+    height: 2rem;
+    background-color: var(--accent2-color);
+    background-color: #00000000;
+    border: none;
+    color: var(--secondary-color);
+    box-sizing: border-box;
+}
+button i{
+    color: var(--secondary-color);
+    font-size: 2em;
+
+}
+button i:hover{
+    opacity: .6;
+    transform: scale(1.1);
+}
+.comment-box{
+    box-sizing: border-box;
+    width: 100%;
+    height: 2em;
+    min-height: 2em;
+    background-color: var(--accent2-color);
+    border: var(--secondary-color) 2px solid;
+    border-radius: 1em;
+}
+/* how do I make the text in my textarea diappear when the user starts to enter something */
+textarea::placeholder{
+    color: var(--secondary-color);
+    padding: 0 1%;
+}
+
 
 /*------------MEDIA QUERIES------------*/
 @media screen and (max-width: 900px) {
@@ -375,3 +429,7 @@ li{
         margin-top: 25px;
     }
 }
+
+
+/* example of pseudo class */
+
