@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles\style.css">
+    <title>The Lunch Trey Blog</title>
+</head>
+<body>
+<div id="content">
+    <header>
+        <nav>
+            <img src="Images/LogoWhite.svg" alt="Lunch Trey logo">
+            <a href="blog.html">Blog</a>
+            <a href="about-me.html">About Me</a>
+            <a href="portfolio.html">Personal Portfolio</a> <!-- TODO: change name? -->
+        </nav>
+    </header>
+    <div id="small-about-me">
+        <img id="personalPhoto"src="Images/meOptimized.jpg" alt="Photo of me">
+        <h3>Trey Torrez</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam sint dignissimos dolore autem accusantium quo veniam cupiditate mollitia atque, maiores minima exercitationem rerum? Tenetur, illo aliquid optio provident nemo libero?</p>
+    </div>
+    <div class="blog-post">
+    <img src="Images/smileWhite.svg" alt="pic before blog post"> <!--TODO: decide what, if any picture you want here-->
+    <h2 class="blog-title">Blog Title</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore iure error, odit enim minima quia impedit alias atque id dolorem itaque incidunt culpa. Quae quisquam soluta possimus doloribus laudantium cum.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum aperiam magni, modi debitis cupiditate alias quis eveniet sapiente! Sunt voluptatum aspernatur optio amet doloremque incidunt itaque, adipisci iste vel accusantium!</p>
+        <p class="post-date">3/21/23</p>
+    <textarea name="Comments" class="comment-box" placeholder="Comment here :&#41;"></textarea>
+
+    </div>
+    <div class="blog-post">
+        <img src="Images/smileWhite.svg" alt="pic before blog post"> <!--TODO: decide what, if any picture you want here-->
+        <h2 class="blog-title">Blog Title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore iure error, odit enim minima quia impedit alias atque id dolorem itaque incidunt culpa. Quae quisquam soluta possimus doloribus laudantium cum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum aperiam magni, modi debitis cupiditate alias quis eveniet sapiente! Sunt voluptatum aspernatur optio amet doloremque incidunt itaque, adipisci iste vel accusantium!</p>
+            <p class="post-date">3/21/23</p>
+        <textarea name="Comments" class="comment-box" placeholder="Comment here :&#41;"></textarea>
+        </div>
+    </div>
+    <script>
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+            }
+        if (window.innerWidth <= 800) {var animation = false;}
+        else {var animation = true;}
+
+        async function getHeight() {
+            var aboutMeHeight = document.getElementById("small-about-me").offsetHeight;
+            var navHeight = document.querySelector("nav").offsetHeight;
+            if (animation == false) {
+                document.getElementById("personalPhoto").style.display = "block";
+                document.getElementById("personalPhoto").animate([
+                {height: "0"},
+                {height: "5em"}
+                ], {
+                duration: 500,
+                easing: "ease-in-out"
+                })
+                animation = true;
+                document.getElementById("personalPhoto").style.height = "5em";
+            }
+            if (window.innerWidth <= 800) {
+                document.getElementById("personalPhoto").style.display = "none";
+                document.querySelector(".blog-post:nth-of-type(2)").style.marginTop = aboutMeHeight + "px";
+                document.querySelector("#small-about-me").style.Top = navHeight + "px";
+                animation = false;
+            }
+            else {
+                document.querySelector(".blog-post:nth-of-type(2)").style.marginTop = "1%";
+                document.querySelector("#small-about-me").style.Top = "1%";
+            }
+        }
+        getHeight();
+        window.onresize = function() {
+            // activate function after a second because it just doesn't work sometimes ¯\_(ツ)_/¯
+            // it was because the function was fetching the height before the transition was done and thus the height was not correct yet
+            getHeight();
+            setTimeout(getHeight, 100);
+
+        }
+    </script>
+</body>
+</html>
