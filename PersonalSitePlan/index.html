@@ -12,38 +12,51 @@
     <header>
         <nav>
             <img src="Images/LogoWhite.svg" alt="Lunch Trey logo">
-            <a href="blog.html">Blog</a>
-            <a href="about-me.html">About Me</a>
-            <a href="portfolio.html">Personal Portfolio</a> <!-- TODO: change name? -->
+            <a id="current-page" href="index.html">Blog</a>
+            <a id="other-link1" href="about-me.html">About Me</a>
+            <a id="other-link2" href="showcase.html">Personal Showcase</a> <!-- TODO: change name? -->
         </nav>
     </header>
     <div id="small-about-me">
-        <img id="personalPhoto"src="Images/meOptimized.jpg" alt="Photo of me">
+        <img id="personalPhoto" src="Images/meOptimized.jpg" alt="Photo of me">
         <h3>Trey Torrez</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam sint dignissimos dolore autem accusantium quo veniam cupiditate mollitia atque, maiores minima exercitationem rerum? Tenetur, illo aliquid optio provident nemo libero?</p>
+        <p>Welcome to the blog! I'm a Computer Science major in my first year of college and your local internet denizen. I love technology, people, and just having a good time. </p>
     </div>
-    <div class="blog-post">
+    <div id="post1" class="blog-post">
     <img src="Images/smileWhite.svg" alt="pic before blog post"> <!--TODO: decide what, if any picture you want here-->
-    <h2 class="blog-title">Blog Title</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore iure error, odit enim minima quia impedit alias atque id dolorem itaque incidunt culpa. Quae quisquam soluta possimus doloribus laudantium cum.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum aperiam magni, modi debitis cupiditate alias quis eveniet sapiente! Sunt voluptatum aspernatur optio amet doloremque incidunt itaque, adipisci iste vel accusantium!</p>
-        <p class="post-date">3/21/23</p>
-    <textarea name="Comments" class="comment-box" placeholder="Comment here :&#41;"></textarea>
+    <h2 class="blog-title">First Post!</h2>
+        <p class="post-content">Welcome to the blog! I made this to be a personal blog for me to share my life to others in a format that is a bit older but way more customizable. I can do whatever I want to the site! Can you do
+            <span>
+                this
+                </span> on your instagram?
+                Anyways, I'll be posting about my life, my hobbies, my projects, and my thoughts. I hope you enjoy!
+                <br><br>
+                PS: The comments are entirely unfunctional right now, I'm still working on the site so it's not perfect yet.
+
+                </p>
+        <time class="post-date" datetime="2023-03-01T12:09:30">3/23/23</time>
+    <textarea name="Comments" class="comment-box" placeholder="Comments broken for now :&#40;"></textarea>
 
     </div>
-    <div class="blog-post">
+    <div id="post2" class="blog-post">
         <img src="Images/smileWhite.svg" alt="pic before blog post"> <!--TODO: decide what, if any picture you want here-->
         <h2 class="blog-title">Blog Title</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore iure error, odit enim minima quia impedit alias atque id dolorem itaque incidunt culpa. Quae quisquam soluta possimus doloribus laudantium cum.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum aperiam magni, modi debitis cupiditate alias quis eveniet sapiente! Sunt voluptatum aspernatur optio amet doloremque incidunt itaque, adipisci iste vel accusantium!</p>
+        <p class="post-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore iure error, odit enim minima quia impedit alias atque id dolorem itaque incidunt culpa. Quae quisquam soluta possimus doloribus laudantium cum.
+        <br>
+        <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem corrupti maxime cupiditate, soluta sapiente vitae dolorem asperiores sit similique velit iste nisi. Magnam excepturi modi aliquid ipsam ut id nihil.
+        </p>
+        <time class="post-date" datetime="2023-03-01T12:09:30">3/21/23</time>
+
             <p class="post-date">3/21/23</p>
-        <textarea name="Comments" class="comment-box" placeholder="Comment here :&#41;"></textarea>
+        <textarea class="comment-box" placeholder="Comments broken for now :&#40;"></textarea>
         </div>
+        <small>blog post template ^</small>
     </div>
     <script>
-        function sleep(ms) {
-            return new Promise(resolve => setTimeout(resolve, ms));
-            }
+        // function sleep(ms) {
+        //     return new Promise(resolve => setTimeout(resolve, ms));
+        //     }
         if (window.innerWidth <= 800) {var animation = false;}
         else {var animation = true;}
 
@@ -53,13 +66,13 @@
             if (animation == false) {
                 document.getElementById("personalPhoto").style.display = "block";
                 document.getElementById("personalPhoto").animate([
-                {height: "0"},
-                {height: "5em"}
-                ], {
-                duration: 500,
-                easing: "ease-in-out"
-                })
-                animation = true;
+                    {height: "0"},
+                    {height: "5em"}
+                    ], {
+                    duration: 500,
+                    easing: "ease-in-out"
+                    })
+                    animation = true;
                 document.getElementById("personalPhoto").style.height = "5em";
             }
             if (window.innerWidth <= 800) {
@@ -77,8 +90,8 @@
         window.onresize = function() {
             // activate function after a second because it just doesn't work sometimes ¯\_(ツ)_/¯
             // it was because the function was fetching the height before the transition was done and thus the height was not correct yet
-            getHeight();
-            setTimeout(getHeight, 100);
+            // getHeight();
+            setTimeout(getHeight, 500);
 
         }
     </script>
