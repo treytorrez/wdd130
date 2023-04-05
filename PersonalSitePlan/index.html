@@ -7,52 +7,84 @@
     <link rel="stylesheet" href="styles\style.css">
     <title>The Lunch Trey Blog</title>
 </head>
+
+
+
 <body>
-<div id="content">
     <header>
         <nav>
-            <img src="Images/LogoWhite.svg" alt="Lunch Trey logo">
-            <a id="current-page" href="index.html">Blog</a>
-            <a id="other-link1" href="about-me.html">About Me</a>
-            <a id="other-link2" href="showcase.html">Personal Showcase</a> <!-- TODO: change name? -->
+            <a id="logo-link" href="index.html" >
+                <img id="logo" src="Images/LogoWhite.svg" alt="Lunch Trey logo">
+            </a>
+            <a id="current-page" class="nav-link" href="index.html">Blog</a>
+            <a id="other-link1" class="nav-link" href="about-me.html">About Me</a>
+            <a id="other-link2" class="nav-link" href="showcase.html">Personal Showcase</a>
         </nav>
     </header>
+    <div id="content">
+
+    <!--------------------------------ABOUT ME SIDEBAR-------------------------------->
     <div id="small-about-me">
         <img id="personalPhoto" src="Images/meOptimized.jpg" alt="Photo of me">
-        <h3>Trey Torrez</h3>
-        <p>Welcome to the blog! I'm a Computer Science major in my first year of college and your local internet denizen. I love technology, people, and just having a good time. </p>
-    </div>
-    <div id="post1" class="blog-post">
-    <img src="Images/smileWhite.svg" alt="pic before blog post"> <!--TODO: decide what, if any picture you want here-->
-    <h2 class="blog-title">First Post!</h2>
-        <p class="post-content">Welcome to the blog! I made this to be a personal blog for me to share my life to others in a format that is a bit older but way more customizable. I can do whatever I want to the site! Can you do
-            <span>
-                this
-                </span> on your instagram?
-                Anyways, I'll be posting about my life, my hobbies, my projects, and my thoughts. I hope you enjoy!
-                <br><br>
-                PS: The comments are entirely unfunctional right now, I'm still working on the site so it's not perfect yet.
-
-                </p>
-        <time class="post-date" datetime="2023-03-01T12:09:30">3/23/23</time>
-    <textarea name="Comments" class="comment-box" placeholder="Comments broken for now :&#40;"></textarea>
-
-    </div>
-    <div id="post2" class="blog-post">
-        <img src="Images/smileWhite.svg" alt="pic before blog post"> <!--TODO: decide what, if any picture you want here-->
-        <h2 class="blog-title">Blog Title</h2>
-        <p class="post-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore iure error, odit enim minima quia impedit alias atque id dolorem itaque incidunt culpa. Quae quisquam soluta possimus doloribus laudantium cum.
-        <br>
-        <br>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem corrupti maxime cupiditate, soluta sapiente vitae dolorem asperiores sit similique velit iste nisi. Magnam excepturi modi aliquid ipsam ut id nihil.
+        <h3>
+            Trey Torrez
+        </h3>
+        <p>
+            Welcome to the blog! I'm a Computer Science major in my first year of college and your local internet denizen. I love technology, people, and just having a good time.
         </p>
-        <time class="post-date" datetime="2023-03-01T12:09:30">3/21/23</time>
+    </div>
 
-            <p class="post-date">3/21/23</p>
+    <!--------------------------------POST 1-------------------------------->
+    <div id="post1" class="blog-post">
+        <img src="Images/smileWhite.svg" alt="pic before blog post">
+        <h2 class="blog-title">
+            First Post!
+        </h2>
+        <p class="post-content">
+            Welcome to the blog! I made this to be a personal blog for me to share my life to others in a format that is a bit older but way more customizable. I can do whatever I want to the site! Can you do <span>this</span> on your instagram?
+            Anyways, I'll be posting about my life, my hobbies, my projects, and my thoughts. I hope you enjoy!
+        <br><br>
+            PS: The comments are entirely unfunctional right now, I'm still working on the site so it's not perfect yet.
+        </p>
+        <time class="post-date" datetime="2023-03-01T12:09:30">
+            3/23/23
+        </time>
+        <textarea name="Comments" class="comment-box" placeholder="Comments broken for now :&#40;"></textarea>
+    </div>
+
+    <!--------------------------------POST 2-------------------------------->
+    <div id="post2" class="blog-post">
+        <img src="Images/smileWhite.svg" alt="pic before blog post">
+        <h2 class="blog-title">Blog Title</h2>
+        <p class="post-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore iure error, odit enim minima quia impedit alias atque id dolorem itaque incidunt culpa. Quae quisquam soluta possimus doloribus laudantium cum.
+        <br>
+        <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem corrupti maxime cupiditate, soluta sapiente vitae dolorem asperiores sit similique velit iste nisi. Magnam excepturi modi aliquid ipsam ut id nihil.
+        </p>
+        <time class="post-date" datetime="2023-03-01T12:09:30">
+            3/21/23
+        </time>
         <textarea class="comment-box" placeholder="Comments broken for now :&#40;"></textarea>
         </div>
-        <small>blog post template ^</small>
+        <small>
+            blog post template ^
+        </small>
     </div>
+        <footer>
+            <p>
+                I have no clue what to put down here! I'll figure it out later. For now heres a footer that is animated to bounce! hover over for fun!
+            </p>
+            <a href="https://facebook.com" rel="noopener" target="_blank">
+                <img class="footer-socials" src="images/facebook.png" alt="Facebook icon" >
+              </a>
+              <a href="https://twitter.com" rel="noopener" target="_blank">
+                  <img class="footer-socials" src="images/twitter.png" alt="Twitter icon" >
+              </a>
+              <a href="https://instagram.com" rel="noopener" target="_blank">
+                  <img class="footer-socials" src="images/instagram.png" alt="Instagram icon" >
+                </a>
+            </footer>
     <script>
         // function sleep(ms) {
         //     return new Promise(resolve => setTimeout(resolve, ms));
@@ -60,6 +92,7 @@
         if (window.innerWidth <= 800) {var animation = false;}
         else {var animation = true;}
 
+        var initialHeight = document.getElementById("personalPhoto").offsetHeight;
         async function getHeight() {
             var aboutMeHeight = document.getElementById("small-about-me").offsetHeight;
             var navHeight = document.querySelector("nav").offsetHeight;
@@ -67,18 +100,18 @@
                 document.getElementById("personalPhoto").style.display = "block";
                 document.getElementById("personalPhoto").animate([
                     {height: "0"},
-                    {height: "5em"}
+                    {height: initialHeight}
                     ], {
                     duration: 500,
                     easing: "ease-in-out"
                     })
                     animation = true;
-                document.getElementById("personalPhoto").style.height = "5em";
+                document.getElementById("personalPhoto").style.height = initialHeight; // MAKE SURE THIS IS THE SAME SIZE AS THE PHOTO ORIGINALLY WAS IN THE CSS
             }
             if (window.innerWidth <= 800) {
                 document.getElementById("personalPhoto").style.display = "none";
                 document.querySelector(".blog-post:nth-of-type(2)").style.marginTop = aboutMeHeight + "px";
-                document.querySelector("#small-about-me").style.Top = navHeight + "px";
+                document.querySelector("#small-about-me").style.top = navHeight + "px";
                 animation = false;
             }
             else {
